@@ -1,5 +1,6 @@
 <h2>スケジュール編集</h2>
 
+<%= render "shared/error", obj: @post %> 
 <%= form_with model: @post do |f| %>
 <table>
     <tr>
@@ -15,8 +16,8 @@
         <td><%= f.date_field :posted_day %></td>
     </tr>
     <tr>
-        <th><%= f.label :checkbox, "終日" %></th>
-        <td><%= f.check_box :checkbox, {}, "1", "0" %></td>
+        <th><%= f.label :ckeckbox, "終日" %></th>
+        <td><%= f.check_box :ckeckbox, {}, "1", "0" %></td>
         <br>終日の場合はチェックを入れます</br>
     </tr>
     <tr>
